@@ -53,7 +53,7 @@ export default function Register(): JSX.Element {
       role: userRole,
     };
 
-    const endpoint = `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/auth/signup`;
+    const endpoint = `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/auth/signup`;
 
     axios
       .post(endpoint, data)

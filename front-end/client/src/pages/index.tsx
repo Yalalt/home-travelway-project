@@ -19,7 +19,7 @@ import {
 export default function Home(): JSX.Element {
   const [travels, setTravels] = useState<TravelType[] | null>(null);
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URI}/travels/get`)
+    fetch(`${process.env.NEXT_PUBLIC_API_BACK_END_URL}/travels/get`)
       .then((response) => response.json())
       .then((res) => setTravels(res));
   }, []);

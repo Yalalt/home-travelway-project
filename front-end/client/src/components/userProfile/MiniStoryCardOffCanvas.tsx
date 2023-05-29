@@ -35,7 +35,7 @@ export default function MiniStoryCardOffCanvas(props: Props): JSX.Element {
   function remove() {
     axios
       .delete(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/ministory/${story._id}`
+        `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/ministory/${story._id}`
       )
       .then(() => notifyDelete());
   }
@@ -45,7 +45,7 @@ export default function MiniStoryCardOffCanvas(props: Props): JSX.Element {
     e.preventDefault();
     axios
       .patch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/ministory/${story._id}`,
+        `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/ministory/${story._id}`,
         {
           title: e.target.title.value,
           sentence: e.target.sentence.value,

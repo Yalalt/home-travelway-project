@@ -27,7 +27,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
       return;
     }
 
-    const travelData = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_API_URI}/travels/${id}`);
+    const travelData = await axios.get(`${process.env.NEXT_PUBLIC_API_BACK_END_URL}/travels/${id}`);
     const result = travelData.data;
 
     return {
@@ -43,7 +43,7 @@ export async function getStaticProps({ params }: { params: { id: string } }) {
 
 export async function getStaticPaths() {
   try {
-    const result = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_API_URI}/travels/get`);
+    const result = await axios.get(`${process.env.NEXT_PUBLIC_API_BACK_END_URL}/travels/get`);
     const { data } = result;
 
     const path = data.map((el: TravelType) => ({

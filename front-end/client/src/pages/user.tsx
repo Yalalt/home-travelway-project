@@ -29,7 +29,7 @@ export default function User(): JSX.Element {
     const getFetchTravel = async (): Promise<void> => {
       try {
         const travels = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/travels/get`
+          `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/travels/get`
         );
         const filteredData = travels.data.filter(
           (item: TravelType) => item.userId === user?._id
@@ -46,7 +46,7 @@ export default function User(): JSX.Element {
     const getFetchData = async (): Promise<void> => {
       try {
         const travels = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/ministory/get`
+          `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/ministory/get`
         );
         const filteredData = travels.data.filter(
           (item: miniStoryType) => item.userId === user?._id

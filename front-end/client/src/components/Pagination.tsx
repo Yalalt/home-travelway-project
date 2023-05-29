@@ -14,7 +14,7 @@
 //   const [error, setError] = useState<string>("");
 
 //   useEffect(() => {
-//     fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URI}/${path}/${pageNum}`)
+//     fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/${path}/${pageNum}`)
 //       .then((response) => {
 //         if (!response.ok) {
 //           throw new Error("Network response was not ok");

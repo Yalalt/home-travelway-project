@@ -11,7 +11,7 @@ export default function Travel({ result }: { result: TravelType }) {
   const [travelData, setTravelData] = useState<TravelType | null>(null);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URI}/travels/${id}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_BACK_END_URL}/travels/${id}`)
       .then((response) => response.json())
       .then((res) => setTravelData(res));
   }, [id]);

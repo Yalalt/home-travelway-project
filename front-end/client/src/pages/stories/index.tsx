@@ -69,7 +69,7 @@ export async function getServerSideProps(context: { query: any }) {
   const { query } = context;
   try {
     const res = await axios.get(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/stories/mark?${
+      `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/stories/mark?${
         query.search ? `&search=${query.search}` : ""
       }${query.category ? `&category=${query.category}` : ""}${
         query.province ? `&province=${query.province}` : ""

@@ -52,7 +52,7 @@ export default function Test(props: { data: StoryTypeSh }): JSX.Element {
 
 export async function getStaticPaths() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/stories/allId`
+    `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/stories/allId`
   );
   const ids = await res.json();
 
@@ -68,7 +68,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { id: string } }) {
   const { data } = await axios.get(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/stories/${params.id}`
+    `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/stories/${params.id}`
   );
   return {
     props: {

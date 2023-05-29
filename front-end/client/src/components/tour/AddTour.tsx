@@ -147,7 +147,7 @@ const AddTour = () => {
 
         axios
           .post(
-            `${process.env.NEXT_PUBLIC_BACKEND_API_URI}/travels/add`,
+            `${process.env.NEXT_PUBLIC_API_BACK_END_URL}/travels/add`,
             sendFormData
           )
           .then((response) => response.data)
