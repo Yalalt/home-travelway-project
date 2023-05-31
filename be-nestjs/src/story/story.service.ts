@@ -72,7 +72,6 @@ export class StoryService {
     return provinceStatus;
   }
 
-
   async findAllId(): Promise<any> {
     const result = await this.storyModel.find({}).select({ id: 1 });
     return result;
